@@ -1,0 +1,823 @@
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: -webkit-linear-gradient(left, #39a8f1, #05b7fd);
+   border-radius: 10px;
+   box-shadow: inset 0 0 5px rgba(13, 9, 248, 0.637);
+}
+
+body {
+   background: url(https://blog.asiayo.com/wp-content/uploads/2017/03/%E6%B2%96%E7%B9%A9_%E9%95%B7%E6%B5%9C%E6%B5%B7%E7%81%98_yvonne.jpg) no-repeat fixed center/cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   -webkit-user-select: none;
+   box-shadow: 0 0 50px 10px #ffffff inset;
+   overflow-x: hidden;
+}
+
+body:before {
+   content: "";
+   position: fixed;
+   top: -10px;
+   left: 0;
+   width: 100%;
+   height: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+   z-index: 100;
+}
+
+body:after {
+   content: "";
+   position: fixed;
+   bottom: -10px;
+   left: 0;
+   width: 100%;
+   height: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, .8);
+   z-index: 100;
+}
+
+a {
+   font-size: 1.1em;
+   font-weight: 100;
+   text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+   text-decoration: underline;
+}
+
+abbr {
+   border-bottom: none;
+   text-decoration: none;
+}
+
+section {
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.animate__lightSpeedInLeft {
+   animation: bounce;
+   /* referring directly to the animation's @keyframe declaration */
+   animation-duration: 1s;
+   /* don't forget to set a duration! */
+}
+
+header {
+   color: rgb(248, 126, 11);
+}
+
+header h1 {
+   font-size: 3em;
+   font-family: "almaq-rough", sans-serif;
+   font-weight: 400;
+   padding: 10px 10px 5px 10px;
+   margin: 0;
+   text-shadow: 0px 0px 5px rgba(15, 228, 217, 0.5);
+}
+
+header h2 {
+   font-size: 5em;
+   font-weight: 100;
+   line-height: 1em;
+   padding: 0px 10px 15px 10px;
+   margin: 0;
+   text-shadow: 0px 0px 5px rgba(15, 228, 217, 0.5);
+}
+
+.summary {
+   color: #ffffff;
+   font-size: 14px;
+}
+
+.preamble {
+   background: url(./images/tiger.jpg) fixed no-repeat center/cover;
+   /* height: 100%; */
+   min-height: 100vh;
+   box-shadow: 0 0 20px 10px rgba(0, 150, 200, 1);
+   transform: scale(.85);
+}
+
+.preamble>* {
+   background: rgba(188, 234, 240, 0.5);
+   margin: auto;
+   font-family: "Rye", cursive;
+   /* animation-iteration-count: infinite; */
+   /* animation-duration: 3s; */
+}
+
+.preamble h3 {
+   position: absolute;
+   left: 50px;
+   text-align: center;
+   line-height: 200px;
+   margin: 0;
+   font-size: 60px;
+   /* animation-name:fish; */
+   color: rgb(255, 255, 255);
+   background: none;
+   width: 800px;
+   height: 340px;
+   font-family: 'Caveat', cursive;
+}
+
+.preamble h3:hover {
+   color: transparent;
+   background: url(./images/bird3.png)no-repeat center/cover;
+   background-size: 250px;
+}
+
+/* @keyframes fish{
+   from{
+      left:0;
+   }
+   to{
+      left:100px;
+   }
+} */
+.preamble p {
+   font-size: 20px;
+   color: transparent;
+   font-family: 'Mali', cursive;
+}
+
+.preamble p:hover {
+   color: white;
+   background: none;
+}
+
+.move1 {
+   position: absolute;
+   top: 300px;
+   left: 50px;
+   padding-top: 50px;
+   background: url(./images/bird.png)no-repeat center/cover;
+   background-size: 150px;
+   width: 400px;
+   height: 200px;
+}
+
+.move2 {
+   position: absolute;
+   top: 200px;
+   left: 650px;
+   background: url(./images/bird2.png)no-repeat center/cover;
+   background-size: 200px;
+   width: 400px;
+   height: 270px;
+   padding-top: 50px;
+}
+
+.move3 {
+   position: absolute;
+   top: 50px;
+   left: 1000px;
+   background: url(./images/bird4.png)no-repeat center/cover;
+   background-size: 150px;
+   width: 400px;
+   height: 200px;
+   padding-top: 50px;
+}
+
+.preamble abbr {
+   font-family: 'Mali', cursive;
+}
+
+
+/* .preamble::before{
+   content: "Hover The Cloud !";
+   font-size: 3rem;
+   position: absolute;
+   top: 50px;
+   left: 550px;
+   color: rgb(104, 18, 241);
+   animation: shake 1s infinite; 
+   font-family: 'Mali', cursive;
+}
+
+@keyframes shake {
+   0%, 100% {
+      transform: translateX(0);
+   }
+   10%,
+   30%,
+   50%,
+   70%,
+   90% {
+      transform: translateX(-5px);
+   }
+   20%,
+   40%,
+   60%,
+   80% {
+      transform: translateX(5px);
+   }
+} */
+/* .preamble::after{ 
+   content: "↓";
+   font-size: 3rem;
+   position: absolute;
+   top: 150px;
+   left: 400px;
+   color: red;
+}  */
+
+
+
+/* .preamble::before {
+   content: "";
+   position: absolute;
+   left: 70px;
+   top: 0;
+   width: 70px;
+   height: 115px;
+   background: red;
+   border-radius: 50px 50px 0 0;
+   transform: rotate(-45deg);
+   transform-origin: left bottom;
+}
+
+.preamble::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 70px;
+   height: 115px;
+   background: red;
+   border-radius: 50px 50px 0 0;
+   transform: rotate(45deg);
+   transform-origin: right bottom;
+} */
+
+.explanation {
+   background: url(./images/dophin.jpg)fixed no-repeat center/cover;
+   height: 100%;
+   min-height: 100vh;
+   width: 100%;
+   box-shadow: 0 0 20px 10px rgba(0, 150, 200, 1);
+   transform: scale(.85);
+}
+
+.explanation h3 {
+   background: none;
+   position: absolute;
+   top: 0px;
+   left: 800px;
+   text-align: center;
+   line-height: 400px;
+   margin: 0;
+   font-size: 35px;
+   color: white;
+   width: 400px;
+   height: 400px;
+   font-family: 'Mali', cursive;
+}
+
+.explanation h3:hover {
+   background: url(./images/buble.png)no-repeat center/cover;
+   background-size: 200px;
+   color: transparent;
+}
+
+.explanation p {
+   font-size: 20px;
+   color: transparent;
+   font-family: 'Mali', cursive;
+}
+
+.explanation p:hover {
+   color: white;
+   background: none;
+}
+
+.explanation abbr {
+   font-family: 'Mali', cursive;
+}
+
+.move4 {
+   position: absolute;
+   top: 200px;
+   left: 1000px;
+   background: url(./images/buble2.png)no-repeat center/cover;
+   background-size: 300px;
+   width: 400px;
+   height: 500px;
+   padding-top: 130px;
+}
+
+.move5 {
+   position: absolute;
+   top: 550px;
+   left: 720px;
+   background: url(./images/buble3.png)no-repeat center/cover;
+   background-size: 200px;
+   width: 400px;
+   height: 270px;
+   padding-top: 20px;
+}
+
+
+/* .explanation::before {
+   content: "Hover Me !";
+   font-size: 3rem;
+   position: absolute;
+   top: 300px;
+   left: 850px;
+   color: red;
+   animation: heartbeat 0.5s infinite;
+   font-family: 'Mali', cursive;
+}
+
+@keyframes heartbeat {
+   0% {
+      -webkit-transform: rotate(-30deg) scale(0.8, 0.8);
+      opacity: 1;
+   }
+
+   25% {
+      -webkit-transform: rotate(-30deg) scale(1, 1);
+      opacity: 0.8;
+   }
+
+   100% {
+      -webkit-transform: rotate(-30deg) scale(0.8, 0.8);
+      opacity: 1;
+   }
+} */
+
+.participation {
+   background: url(./images/Turtle.jpg)fixed no-repeat center/cover;
+   height: 100%;
+   min-height: 100vh;
+   width: 100%;
+   box-shadow: 0 0 20px 10px rgba(0, 150, 200, 1);
+   transform: scale(.85);
+}
+
+.participation h3 {
+   background: none;
+   position: absolute;
+   top: 50px;
+   left: 200px;
+   text-align: center;
+   line-height: 200px;
+   margin: 0;
+   font-size: 60px;
+   color: rgb(255, 255, 255);
+   background: none;
+   width: 200px;
+   height: 150px;
+   font-family: 'Caveat', cursive;
+}
+
+.participation h3:hover {
+   color: transparent;
+   background: url(./images/fish2.png)no-repeat center/cover;
+   background-size: 250px;
+}
+
+.participation p {
+   font-size: 20px;
+   color: transparent;
+   font-family: 'Mali', cursive;
+}
+
+.participation p:hover {
+   color: black;
+   background: none;
+}
+
+.participation abbr,
+.participation a {
+   font-family: 'Mali', cursive;
+}
+
+.move6 {
+   position: absolute;
+   top: 700px;
+   left: 50px;
+   padding-top: 50px;
+   background: url(./images/star.png)no-repeat center/cover;
+   background-size: 200px;
+   width: 400px;
+   height: 200px;
+}
+
+.move7 {
+   position: absolute;
+   top: 320px;
+   left: 150px;
+   background: url(./images/456.png)no-repeat center/cover;
+   background-size: 150px;
+   width: 400px;
+   height: 270px;
+   padding-top: 50px;
+}
+
+.move8 {
+   position: absolute;
+   top: 10px;
+   left: 1000px;
+   background: url(./images/fish.png)no-repeat center/cover;
+   background-size: 250px;
+   width: 400px;
+   height: 200px;
+   padding-top: 30px;
+}
+
+.benefits {
+   background: url(./images/shark.jpg)fixed no-repeat center/cover;
+   height: 100%;
+   min-height: 100vh;
+   width: 100%;
+   box-shadow: 0 0 20px 10px rgba(0, 150, 200, 1);
+   transform: scale(.85);
+}
+
+.benefits h3 {
+   background: none;
+   position: absolute;
+   top: 20px;
+   left: -100px;
+   text-align: center;
+   line-height: 200px;
+   margin: 0;
+   font-size: 80px;
+   color: rgb(255, 255, 255);
+   background: none;
+   width: 800px;
+   height: 200px;
+   font-family: 'Caveat', cursive;
+}
+
+.benefits h3:hover {
+   color: transparent;
+   background: url(./images/peple.png)no-repeat center/cover;
+   background-size: 300px;
+}
+
+.benefits p {
+   background: url(./images/peple2.png)no-repeat center/cover;
+   background-size: 500PX;
+   width: 600px;
+   height: 200px;
+   font-size: 20px;
+   color: transparent;
+   font-family: 'Mali', cursive;
+   position: absolute;
+   top: 150px;
+   left: 900px;
+}
+
+.benefits p:hover {
+   color: black;
+   background: none;
+   padding: 50px;
+}
+
+.benefits abbr {
+   font-family: 'Mali', cursive;
+}
+
+.requirements {
+   background: url(./images/shanhu.jpg)fixed no-repeat center/cover;
+   height: 100%;
+   min-height: 100vh;
+   width: 100%;
+   box-shadow: 0 0 20px 10px rgba(0, 150, 200, 1);
+   transform: scale(.85);
+}
+
+.requirements h3 {
+   background: none;
+   position: absolute;
+   top: 50px;
+   left: -100px;
+   text-align: center;
+   line-height: 200px;
+   margin: 0;
+   font-size: 80px;
+   color: rgb(255, 255, 255);
+   background: none;
+   width: 800px;
+   height: 200px;
+   font-family: 'Caveat', cursive;
+}
+
+.requirements h3:hover {
+   color: transparent;
+   background: url(./images/nimo.png)no-repeat center/cover;
+   background-size: 200px;
+}
+
+.requirements p {
+   font-size: 20px;
+   color: transparent;
+   font-family: 'Mali', cursive;
+}
+
+.requirements p:hover {
+   color: white;
+   background: none;
+   padding: 50px;
+}
+
+.move9 {
+   position: absolute;
+   top: 200px;
+   left: 200px;
+   background: url(./images/dolly.png)no-repeat center/cover;
+   background-size: 200px;
+   width: 400px;
+   height: 270px;
+   padding-top: 50px;
+}
+
+.move10 {
+   position: absolute;
+   top: 20px;
+   left: 500px;
+   background: url(./images/fish.png)no-repeat center/cover;
+   background-size: 250px;
+   width: 400px;
+   height: 200px;
+   padding-top: 50px;
+}
+
+.move11 {
+   position: absolute;
+   top: 200px;
+   left: 600px;
+   background: url(./images/fish3.png)no-repeat center/cover;
+   background-size: 200px;
+   width: 400px;
+   height: 270px;
+   padding-top: 50px;
+}
+
+.move12 {
+   position: absolute;
+   top: 100px;
+   left: 900px;
+   background: url(./images/fish5.png)no-repeat center/cover;
+   background-size: 250px;
+   width: 400px;
+   height: 200px;
+   padding-top: 50px;
+}
+
+.move13 {
+   position: absolute;
+   top: 300px;
+   left: 1000px;
+   background: url(./images/fish4.png)no-repeat center/cover;
+   background-size: 250px;
+   width: 400px;
+   height: 270px;
+   padding-top: 50px;
+}
+
+.requirements abbr {
+   font-family: 'Mali', cursive;
+}
+
+/* .ribbon1 {
+   position: relative;
+   width: 300px;
+   padding: 20px;
+   margin: 50px auto;
+   background: #FFA000;
+   font-size: 20px;
+   color: #555;
+   text-align: center;
+}
+
+.ribbon1>h3:before {
+   content: "";
+   position: absolute;
+   border-style: solid;
+   border-color: #8D6E63 transparent;
+   bottom: -22px;
+   left: 0;
+   border-width: 22px 0 0 22px;
+}
+
+.ribbon1>h3:after {
+   content: "";
+   position: absolute;
+   border-style: solid;
+   border-color: #8D6E63 transparent;
+   bottom: -22px;
+   right: 0;
+   border-width: 22px 22px 0 0;
+}
+
+.ribbon1:before {
+   content: "";
+   position: absolute;
+   display: block;
+   bottom: -22px;
+   border: 33px solid #F57F17;
+   z-index: -1;
+   left: -44px;
+   border-right-width: 33px;
+   border-left-color: transparent;
+}
+
+.ribbon1:after {
+   content: "";
+   position: absolute;
+   display: block;
+   bottom: -22px;
+   border: 33px solid #F57F17;
+   z-index: -1;
+   right: -44px;
+   border-left-width: 33px;
+   border-right-color: transparent;
+} */
+
+aside {
+   position: absolute;
+   top: 600px;
+   right: 0px;
+}
+
+aside h3 {
+   background-color: rgba(255, 255, 255, 0.3);
+   font-size: 1.9em;
+   width: 100%;
+   margin: 10px;
+   padding: 10px;
+   z-index: 10;
+}
+
+aside h3:hover {
+   color: rgba(255, 255, 255, 0.7);
+   background-color: rgba(0, 0, 0, 0.7);
+   cursor: pointer;
+}
+
+aside ul {
+   position: relative;
+   background-color: rgb(198, 244, 250);
+   margin: 9px 10px 10px 10px;
+   padding: 10px;
+   z-index: 20;
+}
+
+ul li {
+   list-style-type: none;
+   font-size: 0.9em;
+   margin: 5px 5px 5px 0px;
+}
+
+ul li .design-name {
+   font-family: "almaq-rough", sans-serif;
+   font-size: 1.4em;
+   font-weight: 400;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+   max-height: 60px;
+   overflow: hidden;
+}
+
+.design-selection:hover,
+.design-archives:hover,
+.zen-resources:hover,
+.design-selection:focus,
+.design-archives:focus,
+.zen-resources:focus,
+.design-selection:active,
+.design-archives:active,
+.zen-resources:active {
+   height: 100%;
+   overflow: visible;
+}
+
+aside a {
+   color: rgb(8, 116, 240);
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.html {
+   background: url(./images/pik2.png)no-repeat center/cover;
+   background-size: 200px;
+   margin: 50px;
+   display: block;
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   line-height: 200px;
+   font-size: 3rem;
+   color: #080808;
+   margin-top: 0;
+}
+
+.css {
+   background: url(./images/pik2.png)no-repeat center/cover;
+   background-size: 200px;
+   margin: 50px;
+   display: block;
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   line-height: 200px;
+   font-size: 3rem;
+   color: #080808;
+   margin-top: 0;
+}
+
+.cc {
+   background: url(./images/pik2.png)no-repeat center/cover;
+   background-size: 200px;
+   margin: 50px;
+   display: block;
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   line-height: 200px;
+   font-size: 3rem;
+   margin-top: 0;
+   color: #080808;
+}
+
+.a11y {
+   background: url(./images/pik2.png)no-repeat center/cover;
+   background-size: 200px;
+   margin: 50px;
+   display: block;
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   line-height: 200px;
+   font-size: 3rem;
+   margin-top: 0;
+   color: #080808;
+}
+
+.gh {
+   background: url(./images/pik2.png)no-repeat center/cover;
+   background-size: 200px;
+   margin: 50px;
+   display: block;
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   line-height: 200px;
+   font-size: 3rem;
+   margin-top: 0;
+   color: #000000;
+}
+.html:hover {
+   background: url(./images/pik1.png)no-repeat center/cover;
+   background-size: 200px;
+}
+
+.css:hover {
+   background: url(./images/pik1.png)no-repeat center/cover;
+   background-size: 200px;
+}
+
+.cc:hover {
+   background: url(./images/pik1.png)no-repeat center/cover;
+   background-size: 200px;
+}
+
+.a11y:hover {
+   background: url(./images/pik1.png)no-repeat center/cover;
+   background-size: 200px;
+}
+
+.gh:hover {
+   background: url(./images/pik1.png)no-repeat center/cover;
+   background-size: 200px;
+   
+}
