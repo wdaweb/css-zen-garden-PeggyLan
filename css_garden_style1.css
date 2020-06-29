@@ -737,8 +737,10 @@ footer {
    text-align: center;
    line-height: 200px;
    font-size: 3rem;
-   color: #080808;
    margin-top: 0;
+   text-shadow: -1px 0 black, 0 3px black,
+   3px 0 black, 0 -1px black;
+color: #ffffff;
 }
 
 .css {
@@ -748,11 +750,13 @@ footer {
    display: block;
    width: 200px;
    height: 200px;
-   text-align: center;
+   text-align:center;
    line-height: 200px;
    font-size: 3rem;
-   color: #080808;
    margin-top: 0;
+   text-shadow: -1px 0 black, 0 3px black,
+      3px 0 black, 0 -1px black;
+   color: #ffffff;
 }
 
 .cc {
@@ -766,7 +770,9 @@ footer {
    line-height: 200px;
    font-size: 3rem;
    margin-top: 0;
-   color: #080808;
+   text-shadow: -1px 0 black, 0 3px black,
+      3px 0 black, 0 -1px black;
+   color: #ffffff;
 }
 
 .a11y {
@@ -780,7 +786,9 @@ footer {
    line-height: 200px;
    font-size: 3rem;
    margin-top: 0;
-   color: #080808;
+   text-shadow: -1px 0 black, 0 3px black,
+      3px 0 black, 0 -1px black;
+   color: #ffffff;
 }
 
 .gh {
@@ -793,31 +801,47 @@ footer {
    text-align: center;
    line-height: 200px;
    font-size: 3rem;
-   margin-top: 0;
-   color: #000000;
+   margin-top: 0; 
+   text-shadow: -1px 0 black, 0 3px black,
+   3px 0 black, 0 -1px black;
+   color: #ffffff;
 }
 .html:hover {
    background: url(./images/pik1.png)no-repeat center/cover;
    background-size: 200px;
+   text-shadow: -1px 0 white, 0 3px white,
+      3px 0 white, 0 -1px white;
+   color: #000000;
 }
 
 .css:hover {
    background: url(./images/pik1.png)no-repeat center/cover;
    background-size: 200px;
+   text-shadow: -1px 0 white, 0 3px white,
+      3px 0 white, 0 -1px white;
+   color: #000000;
 }
 
 .cc:hover {
    background: url(./images/pik1.png)no-repeat center/cover;
    background-size: 200px;
+   text-shadow: -1px 0 white, 0 3px white,
+   3px 0 white, 0 -1px white;
+color: #000000;
 }
 
 .a11y:hover {
    background: url(./images/pik1.png)no-repeat center/cover;
    background-size: 200px;
+   text-shadow: -1px 0 white, 0 3px white,
+      3px 0 white, 0 -1px white;
+   color: #000000;
 }
 
 .gh:hover {
    background: url(./images/pik1.png)no-repeat center/cover;
    background-size: 200px;
-   
+   text-shadow: -1px 0 white, 0 3px white,
+      3px 0 white, 0 -1px white;
+   color: #000000;
 }
