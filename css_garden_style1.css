@@ -179,7 +179,7 @@ header h2 {
 .move2 {
    position: absolute;
    top: 200px;
-   left: 650px;
+   left: 550px;
    background: url(./images/bird2.png)no-repeat center/cover;
    background-size: 200px;
    width: 400px;
